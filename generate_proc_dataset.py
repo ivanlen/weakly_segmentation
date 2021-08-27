@@ -7,8 +7,8 @@ from matplotlib import pyplot as plt
 from PIL import Image
 from tqdm import tqdm
 
-from code import image_cropping
-from code import labelling
+from utils import image_cropping
+from utils import labelling
 
 
 def main(params):
