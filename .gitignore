@@ -1,0 +1,8 @@
+# data folders
+/data
+/proc_data
+
+.ipynb_checkpoints/
+env_torch_IM/
+*.pdf
+*.pyc
