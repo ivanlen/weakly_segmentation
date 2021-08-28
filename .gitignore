@@ -1,8 +1,12 @@
 # data folders
 /data
 /proc_data
+/trained_models
 
+log.csv
+.idea
 .ipynb_checkpoints/
 env_torch_IM/
 *.pdf
 *.pyc
+
