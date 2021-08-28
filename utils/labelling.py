@@ -1,9 +1,9 @@
 import numpy as np
 
 label_color_map = {
-    'surface': [255, 255, 255],
-    'building': [0, 0, 255],
-    'low_veg': [0, 255, 255],
+    'surface': [255, 255, 255],  # white
+    'building': [0, 0, 255],  # blue
+    'low_veg': [0, 255, 255], #
     'tree': [0, 255, 0],
     'car': [255, 255, 0],
     'background': [255, 0, 0]}

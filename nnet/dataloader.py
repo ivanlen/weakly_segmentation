@@ -12,6 +12,7 @@ from utils.labelling import label_color_map
 seed = 18
 np.random.seed(seed)
 
+
 def augment_preprocess_generator():
     """
     input of transform must be ndarray
@@ -91,8 +92,8 @@ class VaihingenDataset(Dataset):
             self.data = self.data[self.data['split'] == split]
 
         self.augment = augment
-        self.transform = x_transform
-        self.target_transform = y_transform
+        self.x_transform = x_transform
+        self.y_transform = y_transform
         self.n_samples = len(self.data)
 
     def __len__(self):
@@ -110,9 +111,9 @@ class VaihingenDataset(Dataset):
             image = aug['image']
             label = aug['mask']
 
-        if self.transform:
-            image = self.transform(Image.fromarray(image))
-        if self.target_transform:
-            label = self.target_transform(label)
+        if self.x_transform:
+            image = self.x_transform(Image.fromarray(image))
+        if self.y_transform:
+            label = self.y_transform(label)
         return image, label
 
