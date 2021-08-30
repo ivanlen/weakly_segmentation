@@ -3,6 +3,17 @@
 In this project we implement a weak supervised training to generate a semantic segmentation model of the ISPRS Vaihingen dataset.
 
 
+### Creating a valid envoiroment
+Using conda (recommended with GPU support):
+```bash
+conda env create -p ./env_weak python=3.7.9 --file ./conda-env.yaml
+```
+
+Using pip:
+```bash
+pip install -r requirements.txt
+```
+
 ### 1. Download data
 run `/download_data.sh` to download the data. It will create the folder `./data` in which the data will be downloaded and unzipped.
 ```bash
