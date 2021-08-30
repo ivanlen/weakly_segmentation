@@ -78,7 +78,7 @@ There are some notebooks that complement the previous files.
     - explore_proc_data.ipynb: Visualise the tiles and masks after processing the raw data.
 - results
     - evaluate_and_explore_trained_model.ipynb: visualise model segmentation maps and gt.
-    - read_model_results.ipynb: loads all the results and generates a summary
+    - show_model_results.ipynb: loads all the results and generates a summary
 
 ### TODOs:
 

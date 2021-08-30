@@ -1,6 +1,6 @@
 # data folders
 /data
-/proc_data
+/proc_data*
 /trained_models
 
 log.csv
