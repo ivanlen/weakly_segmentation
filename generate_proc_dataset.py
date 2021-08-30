@@ -12,7 +12,6 @@ from utils import labelling
 
 
 def main(params):
-
     # Generate splits ---------
     images_list = os.listdir(params.images_path)
     valid_ids = [i.replace('top_mosaic_09cm_area', '').replace('.tif', '') for i in images_list]
@@ -58,7 +57,7 @@ def main(params):
             split = 't2'
         else:
             split = 'val'
-
+        is_weak = True if split == 't2' else False
         boxes = image_cropping.generate_cropping_boxes(_image.shape[1], _image.shape[0], params.tile_size, thresh=0.3)
         for i, box in enumerate(boxes):
             im_cropped = image_cropping.crop_np_image_using_box(_image, box)
@@ -79,7 +78,8 @@ def main(params):
                 'tile_lab_path': tile_lab_path,
                 'raw_box_coords': box,
                 'oh_classes': oh_classes,
-                'oh_color_percents': oh_percents}
+                'oh_color_percents': oh_percents,
+                'is_weak': is_weak}
             data.append(tile_data)
             pil_im_cropped = Image.fromarray(im_cropped)
             pil_lab_cropped = Image.fromarray(lab_cropped)

@@ -3,10 +3,10 @@ import numpy as np
 label_color_map = {
     'surface': [255, 255, 255],  # white
     'building': [0, 0, 255],  # blue
-    'low_veg': [0, 255, 255], #
-    'tree': [0, 255, 0],
-    'car': [255, 255, 0],
-    'background': [255, 0, 0]}
+    'low_veg': [0, 255, 255],  # turquoise
+    'tree': [0, 255, 0],  # green
+    'car': [255, 255, 0],  # yellow
+    'background': [255, 0, 0]}  # red
 
 color_label_map = {
     '[255, 255, 255]': 'surface',
@@ -18,7 +18,7 @@ color_label_map = {
 
 label_classes_map = {
     'surface': 0,
-    'bluiding': 1,
+    'building': 1,
     'low_veg': 2,
     'tree': 3,
     'car': 4}
